@@ -12,7 +12,7 @@ if(process.env.NODE_ENV=="production"){
 }
 
 //routes
-const studenRoutes = require("./routes/studenRoutes");
+const studentRoutes = require("./routes/studentRoutes");
 
 
 //connecting to the server
@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-app.use("/", studenRoutes);
+app.use("", studentRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

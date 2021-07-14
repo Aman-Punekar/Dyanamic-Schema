@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router;
+const router = express.Router();
 const {
   addDetails,
   updateDetails,
@@ -7,9 +7,9 @@ const {
   updateSociety,
 } = require("../controllers/studentData");
 
-router.post("addDetails", addDetails);
-router.put("updateDetails", updateDetails);
-router.get("getDetails", getDetails);
-router.put("updateSociety", updateSociety);
+router.post("/addDetails", addDetails);
+router.put("/updateDetails", updateDetails);
+router.get("/getDetails/:userId", getDetails);
+router.put("/updateSociety", updateSociety);
 
 module.exports = router;
